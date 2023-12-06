@@ -1,6 +1,6 @@
 +++
-author = "Scott Hootman-Ng"
 title = "Advent of Code 2023: Day 1"
+author = "Scott Hootman-Ng"
 date = "2023-12-04"
 description = "Solution to day 1 of the Advent of Code challenge."
 tags = [
@@ -25,7 +25,7 @@ In particular, we will be focusing on the [Day 1](https://adventofcode.com/2023/
 
 # Coding (Python)
 
-*Disclaimer: I'm a relative newbie with programming, and these posts will be documenting essentially everything I'm learning, including Python itself, while solving these problems. Therefore, a lot, or all, of the following will seem very rudimentary/unnecessary to more experienced readers. Further, my goal is to learn something new and solve puzzles, so my solutions will be far from optimal in terms of efficiency.*
+*Disclaimer: I'm a relative newbie with programming, and these posts will be documenting essentially everything I'm learning, including Python itself, while solving these problems. Therefore, a lot, or all, of the following will seem very rudimentary/unnecessary to more experienced readers. Further, my goal is to learn something new and solve puzzles, so my solutions will be far from optimal in terms of efficiency. If you have suggestions regarding efficiency or best practices, please feel free to email (preferable with sources) with suggestions. If you do so, please be **cordial** and **professionl**, otherwise your message will be ignored.*
 
 ## Part 1
 
@@ -50,7 +50,7 @@ import numpy as np
 #use numpy to import the text as a string
 data = np.loadtxt('/path/to/file.txt',dtype=str)
 ```
-Now, to get to the heart of the matter. We create an array called `num` to serve as a reference to check for numerical values in the given strings. We also create an array `code` to store our numbers of interest in the string.
+Now, to get to the heart of the matter. We create an array called `num` to serve as a reference to check for numbers in the given strings. Notice here that we enter the elements in `num` as string characters instead of numeric values. This is because when we eventually investigate the strings from the data, if we compare the characters to numeric values we'll never get a match, as `2=='2'` is always `False`. We also create an array `code` to store our numbers of interest in the string.
 
 
 ``` python {linenos=false}
