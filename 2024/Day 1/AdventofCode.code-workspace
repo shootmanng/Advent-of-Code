@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"output.foreground": "#ff0000"
+		},
+		"editor.tokenColorCustomizations": {
+			"textMateRules": [
+				{
+					"scope": [
+						"string",
+						"string.quoted"
+					],
+					"settings": {
+						"foreground": "#c4c3d2"
+					}
+				}
+			]
+		}
+	}
+}
