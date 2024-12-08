@@ -1,6 +1,7 @@
-use v5.34.0;
+use v5.4;
 use Data::Dumper;
 use Cwd;
+use feature qw<say>;
 
 sub _distance {
     
@@ -53,6 +54,8 @@ while (my $line = <$input>) {
     push @right, $list[1];
     
 }
+
+close $input;
 
 say &_distance(\@left,\@right);
 say &_similarity(\@left,\@right);

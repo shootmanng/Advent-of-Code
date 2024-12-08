@@ -1,6 +1,7 @@
-use v5.34.0;
+use v5.4;
 use Data::Dumper;
 use Cwd;
+use feature qw<say>;
 
 sub _mul {
 
@@ -28,6 +29,8 @@ while (my $line = <$input>) {
     $result += &_mul($line);
     $file .= $line;
 }
+
+close $input;
 
 say $result;
 

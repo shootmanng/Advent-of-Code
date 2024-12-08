@@ -1,6 +1,7 @@
-use v5.34.0;
+use v5.4;
 use Data::Dumper;
 use Cwd;
+use feature qw<say>;
 
 sub _check {
 
@@ -67,6 +68,8 @@ while (my $line = <$input>) {
     $result += &_safe(\@list);   
     $result2 += &_damper(\@list);   
 }
+
+close $input;
 
 say $result;
 say $result2;
